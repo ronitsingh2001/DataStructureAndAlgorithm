@@ -25,5 +25,17 @@ public class allIndicies {
 
     public static int[] allIndices(int[] arr, int x, int idx, int fsf) {
         // write ur code here
+        if(idx==arr.length){
+            int[] base=new int[fsf];
+            return base;
+        }
+        if(arr[idx]==x){
+           int[] rv=  allIndices(arr, x, idx+1, fsf+1);
+           rv[fsf]=idx;
+           return rv;
+        }  else{
+            int[] rv=allIndices(arr, x, idx+1, fsf);
+            return rv;
+        }
     }
 }
