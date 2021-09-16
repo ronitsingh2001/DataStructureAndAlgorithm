@@ -9,6 +9,7 @@ public class getKPC {
         String s = sc.nextLine();
         ArrayList<String> res = getKPC(s);
         System.out.println(res);
+        sc.close();
     }
 
     static String[] code = { ".;", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vwx", "yz" };
