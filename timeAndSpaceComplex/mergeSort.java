@@ -1,7 +1,7 @@
 package timeAndSpaceComplex;
 import java.util.*;
 
-public class mergeSort {
+public class MergeSort {
     public static int[] mergeSort(int[] arr, int lo, int hi) {
         //write your code here
         if(lo==hi){
@@ -66,8 +66,11 @@ public class mergeSort {
         for (int i = 0; i < n; i++) {
           arr[i] = scn.nextInt();
         }
+        scn.close();
+
         int[] sa = mergeSort(arr,0,arr.length - 1);
         System.out.print("Sorted Array -> ");
+        
         print(sa);
       }
 }

@@ -2,18 +2,16 @@ package timeAndSpaceComplex;
 
 import java.util.*;
 
-import javax.lang.model.element.Element;
-
-public class quickSelect {
+public class QuickSelect {
 
     public static int quickSelect(int[] a, int lo, int hi, int k) {
         // write your code here
-        int pivot=a[hi];
-        int pi= partition(a, pivot, lo, hi);
-        if(k>pi)
-            return  quickSelect(a, pi+1, hi, k);
-        else if(k<pi)
-            return quickSelect(a, lo, pi-1, k);
+        int pivot = a[hi];
+        int pi = partition(a, pivot, lo, hi);
+        if (k > pi)
+            return quickSelect(a, pi + 1, hi, k);
+        else if (k < pi)
+            return quickSelect(a, lo, pi - 1, k);
         else
             return pivot;
 
@@ -58,6 +56,8 @@ public class quickSelect {
             arr[i] = scn.nextInt();
         }
         int k = scn.nextInt();
+        scn.close();
+        
         System.out.println(quickSelect(arr, 0, arr.length - 1, k - 1));
     }
 

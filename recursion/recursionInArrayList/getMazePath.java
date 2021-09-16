@@ -10,7 +10,7 @@ public class GetMazePath {
         sc.close();
 
         ArrayList<String> res = getMazePath(0, 0, r - 1, c - 1);
-        
+
         System.out.print(res);
     }
 

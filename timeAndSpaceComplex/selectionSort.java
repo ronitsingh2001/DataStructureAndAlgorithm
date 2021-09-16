@@ -2,13 +2,13 @@ package timeAndSpaceComplex;
 
 import java.util.*;
 
-public class selectionSort {
+public class SelectionSort {
 
     public static void selectionSort(int[] a) {
         // write your code here
         for (int i = 0; i < a.length - 1; i++) {
             int min = i;
-            for (int j = i + 1; j < a.length ; j++) {
+            for (int j = i + 1; j < a.length; j++) {
                 if (isSmaller(a, j, min) == true) {
                     min = j;
                 }
@@ -49,6 +49,8 @@ public class selectionSort {
         for (int i = 0; i < n; i++) {
             arr[i] = scn.nextInt();
         }
+        scn.close();
+
         selectionSort(arr);
         print(arr);
     }

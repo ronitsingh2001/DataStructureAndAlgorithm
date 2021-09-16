@@ -1,6 +1,8 @@
 package timeAndSpaceComplex;
 import java.util.*;
-public class merge2SortedArray {
+
+public class Merge2SortedArray {
+  
     public static int[] mergeTwoSortedArrays(int[] a, int[] b){
         //write your code here
         int[] res= new int[a.length+b.length];
@@ -43,6 +45,7 @@ public class merge2SortedArray {
         for(int i = 0 ; i < m; i++){
           b[i] = scn.nextInt();
         }
+        scn.close();
         int[] mergedArray = mergeTwoSortedArrays(a,b);
         print(mergedArray);
       }

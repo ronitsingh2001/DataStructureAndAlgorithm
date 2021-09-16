@@ -10,7 +10,7 @@ public class GetStairPath {
         sc.close();
 
         ArrayList<String> res = getPath(n);
-        
+
         System.out.println(res);
     }
 
@@ -27,11 +27,11 @@ public class GetStairPath {
         ArrayList<String> r2 = getPath(n - 2);
         ArrayList<String> r3 = getPath(n - 3);
         for (String val : r1)
-            myRes.add( "1" + val );
+            myRes.add("1" + val);
         for (String val : r2)
-            myRes.add( "2" + val );
+            myRes.add("2" + val);
         for (String val : r3)
-            myRes.add( "3" + val );
+            myRes.add("3" + val);
         return myRes;
     }
 }
