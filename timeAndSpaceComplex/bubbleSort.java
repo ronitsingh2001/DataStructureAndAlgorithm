@@ -1,7 +1,7 @@
 package timeAndSpaceComplex;
 import java.util.*;
 
-public class bubbleSort {
+public class BubbleSort {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();

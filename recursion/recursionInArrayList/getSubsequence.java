@@ -6,9 +6,11 @@ public class GetSubsequence {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        ArrayList<String> res = getSubsequence(s);
-        System.out.println(res);
         sc.close();
+
+        ArrayList<String> res = getSubsequence(s);
+
+        System.out.println(res);
     }
 
     public static ArrayList<String> getSubsequence(String s) {
@@ -23,7 +25,7 @@ public class GetSubsequence {
 
         ArrayList<String> recRes = getSubsequence(sN);
         ArrayList<String> myRes = new ArrayList<>();
-        
+
         for (String val : recRes) {
             myRes.add(val);
             myRes.add(val + s0);
