@@ -1,5 +1,4 @@
 package recursion;
-import java.util.*;
 import java.io.*;
 public class allIndicies {
     public static void main(String[] args) throws Exception {

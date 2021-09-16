@@ -1,11 +1,12 @@
 package recursion.recursionInArrayList;
 import java.util.*;
-public class getSubsequence {
+public class GetSubsequence {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s= sc.nextLine();
         ArrayList<String> res= getSubsequence(s);
         System.out.println(res);
+        sc.close();
     }
     public static ArrayList<String> getSubsequence(String s){
         if(s.length()==0){
