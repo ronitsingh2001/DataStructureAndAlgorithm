@@ -1,10 +1,12 @@
 package recursion;
 import java.util.*;
 
-public class printDecreasing {
+public class PrintDecreasing {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        sc.close();
+
         printDecreasing(n);
     }
     public static void printDecreasing(int n){

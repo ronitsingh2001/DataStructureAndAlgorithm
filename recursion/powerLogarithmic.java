@@ -2,11 +2,13 @@ package recursion;
 
 import java.util.Scanner;
 
-public class powerLogarithmic {
+public class PowerLogarithmic {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int p = sc.nextInt();
+        sc.close();
+
         System.out.println(powerLog(n, p));
     }
 
