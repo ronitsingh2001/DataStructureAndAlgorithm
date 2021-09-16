@@ -3,11 +3,14 @@ package recursion.recursionInArrayList;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class getStairPath {
+public class GetStairPath {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        sc.close();
+
         ArrayList<String> res = getPath(n);
+        
         System.out.println(res);
     }
 
