@@ -7,8 +7,8 @@ public class ArrangeBuilding {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.close();
-        long send = 1;
-        long bend = 1;
+        long     send = 1;
+        long     bend = 1;
         for (int i = 2; i <= n; i++) {
             long Nsend = bend;
             long Nbend = bend + send;
