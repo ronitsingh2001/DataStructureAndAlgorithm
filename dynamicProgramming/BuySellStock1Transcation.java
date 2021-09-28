@@ -1,4 +1,4 @@
-package patterns;
+package dynamicProgramming;
 
 import java.util.Scanner;
 
