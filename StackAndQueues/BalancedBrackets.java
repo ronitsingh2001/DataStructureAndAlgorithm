@@ -11,31 +11,30 @@ public class BalancedBrackets {
 
         Stack<Character> st = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == ')') {
-                while (st.peek() != '('){
-                    st.pop();
-                    if(st.peek()=='{'||st.peek()==']'){
-                        System.out.println(false);
-                        return;
-                    }
-                }
-                st.pop();
-            } else if (s.charAt(i) == '}') {
-                while (st.peek() != '{'){
-                    st.pop();
-                    if(st.peek()==']'){
-                        System.out.println(false);
-                    }
-                }
-                st.pop();
-            } else if (s.charAt(i) == ']') {
-                while (st.peek() != '[')
-                    st.pop();
-                st.pop();
-            }
-            if (s.charAt(i) != ')' && s.charAt(i) != '}' && s.charAt(i) != ']') {
+           if(s.charAt(i)=='(' || s.charAt(i)=='{' || s.charAt(i)=='['){
                 st.push(s.charAt(i));
+           }else if(s.charAt(i)==')'){
+               if(st.size()==0||st.peek()!='('){
+                   System.out.println(false);
+                   return;
+               }else{
+                   st.pop();
+               }
+           }else if(s.charAt(i)=='}'){
+            if(st.size()==0||st.peek()!='{'){
+                System.out.println(false);
+                return;
+            }else{
+                st.pop();
             }
+           }else if(s.charAt(i)==']'){
+            if(st.size()==0||st.peek()!='['){
+                System.out.println(false);
+                return;
+            }else{
+                st.pop();
+            }
+           }
         }
         System.out.println(true);
     }
