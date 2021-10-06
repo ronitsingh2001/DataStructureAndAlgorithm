@@ -12,24 +12,28 @@ public class SlidingWindowMax {
             a[i] = sc.nextInt();
         int k = sc.nextInt();
         sc.close();
-        int[] ans = new int[n - k];
+        int[] nge = new int[n];
         Stack<Integer> st = new Stack<>();
-        int max = Integer.MIN_VALUE;
-        for (int i = 1; i < k; i++) {
-            if (max < a[n - i])
-                max = a[n - i];
-        }
-        st.push(max);
-        for (int i = n - k -1; i >= 0; i--) {
-            if (st.peek() < a[i]) {
+        st.push(nge.length-1);
+        nge[n-1]=nge.length;
+        for(int i=n-2;i>=0;i--){
+            while(st.size()>0&&a[i]>=a[st.peek()]){
                 st.pop();
-                st.push(a[i]);
-                ans[i] = st.peek();
-            } else {
-                ans[i] = st.peek();
             }
+            if(st.size()>0){
+                nge[i]=st.peek();
+            }else{
+                nge[i]=nge.length;
+            }
+            st.push(i);
         }
-        for (int i = 0; i < n-k; i++)
-            System.out.print(ans[i]+" ");
+        for(int i=0;i<=n-k;i++){
+            int j =i;
+            while(nge[j]<i+k){
+                j=nge[j];
+            }
+            System.out.println(a[j]);
+        }
     }
+
 }
