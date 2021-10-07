@@ -31,8 +31,8 @@ public class LargestAreaInHistogram {
         int[] lb = new int[n];
         st = new Stack<>();
         st.push(0);
-        lb[0]=-1;
-        for(int i=1;i<n;i++){
+        lb[0] = -1;
+        for (int i = 1; i < n; i++) {
             while (st.size() > 0 && a[i] <= a[st.peek()]) {
                 st.pop();
             }
