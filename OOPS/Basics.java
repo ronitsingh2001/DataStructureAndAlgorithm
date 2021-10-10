@@ -50,7 +50,11 @@ public class Basics {
     public static class Person {
         int age;
         String name;
-
+        Person(int age, String name){
+            this.age=age;
+            this.name=name;
+        }
+        Person(){}
         void saysHi() {
             System.out.println(name + "[" + age + "] Says Hi!");
         }
