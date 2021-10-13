@@ -1,0 +1,8 @@
+OBJECT 
+1. Space allocation.
+2. parsing -> class ka vo code jo fn ke bahar hai fire hojata h
+3. Constructer -> Same name as fn
+               -> new keyword to define set properties
+               -> default by default add hojata agr bhul jaye toh
+               -> agr parameterized constructor add krro toh default hatt jata h
+*this -> used to set value of properties of class.
