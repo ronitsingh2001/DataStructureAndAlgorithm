@@ -5,19 +5,10 @@ public class Basics {
         Person p1 = new Person();
         p1.age = 10;
         p1.name = "A";
-        // p1.saysHi();
-        Person p2 = new Person();
-        p2.age = 20;
-        p2.name = "B";
-        // p2.saysHi();
-        // Person p3 = p1;
-        // p3.age=90;
-        // p3.saysHi();
         p1.saysHi();
+        Person p2 = new Person(80,"B");
         p2.saysHi();
-        swap(p1, p2);
-        p1.saysHi();
-        p2.saysHi();
+       
     }
 
     public static void swap(Person p1, Person p2) {
