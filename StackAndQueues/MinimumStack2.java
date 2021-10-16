@@ -40,7 +40,6 @@ public class MinimumStack2 {
                 if (data.peek() >= min) {
                     return data.pop();
                 } else {
-
                     int r = min;
                     min = min + min - data.pop();
                     return r;
