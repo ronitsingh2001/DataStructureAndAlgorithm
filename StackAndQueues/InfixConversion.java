@@ -14,7 +14,7 @@ public class InfixConversion {
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             if (ch == '(') {
-                oper.push(ch);
+                oper.push(ch);  
             } else if (Character.isLetter(ch)) {
                 pre.push(ch + "");
                 post.push(ch + "");

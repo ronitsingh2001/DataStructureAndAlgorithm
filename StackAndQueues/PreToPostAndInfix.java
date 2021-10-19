@@ -14,10 +14,12 @@ public class PreToPostAndInfix {
         for (int i = s.length() - 1; i >= 0; i--) {
             char ch = s.charAt(i);
             if (Character.isDigit(ch)) {
+                System.out.println("outt");
                 in.push(ch + "");
                 pre.push(ch + "");
                 eval.push(ch - '0');
             } else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+                System.out.println("innn");
                 String v2 = in.pop();
                 String v1 = in.pop();
                 in.push('(' + v2 + ch + v1 + ')');
