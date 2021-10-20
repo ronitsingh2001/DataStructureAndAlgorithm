@@ -3,7 +3,7 @@ package StackAndQueues;
 import java.io.*;
 import java.util.*;
 
-public class QueueToStackAdap {
+public class QueueToStackAdapPushEff {
 
   public static class QueueToStackAdapter {
     Queue<Integer> mainQ;
