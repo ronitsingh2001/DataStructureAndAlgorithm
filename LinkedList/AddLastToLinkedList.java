@@ -2,7 +2,6 @@ package LinkedList;
 
 import java.io.*;
 
-
 public class AddLastToLinkedList {
 
     public static class Node {
@@ -18,12 +17,12 @@ public class AddLastToLinkedList {
         void addLast(int val) {
             // Write your code here
             Node temp = new Node();
-            temp.data=val;
-            temp.next=null;
-            if(size==0){
+            temp.data = val;
+            temp.next = null;
+            if (size == 0) {
                 head = tail = temp;
-            }else{
-                tail.next = null;
+            } else {
+                tail.next = temp;
                 tail = temp;
             }
             size++;
