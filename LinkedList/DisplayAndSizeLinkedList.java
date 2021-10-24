@@ -2,6 +2,7 @@ package LinkedList;
 
 import java.io.*;
 
+
 public class DisplayAndSizeLinkedList {
     public static class Node {
         int data;
@@ -35,7 +36,9 @@ public class DisplayAndSizeLinkedList {
 
         public void display() {
             // write code here
-            
+            for(Node temp = head;temp!=null; temp = temp.next){
+                System.out.println(temp.data);
+            }
         }
     }
 
