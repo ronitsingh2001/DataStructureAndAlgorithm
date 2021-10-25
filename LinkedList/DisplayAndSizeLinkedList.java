@@ -36,9 +36,12 @@ public class DisplayAndSizeLinkedList {
 
         public void display() {
             // write code here
-            for(Node temp = head;temp!=null; temp = temp.next){
-                System.out.println(temp.data);
+            Node temp = head;
+            while(temp != null){
+                System.out.print(temp.data+" ");
+                temp = temp.next;
             }
+            System.out.println();
         }
     }
 
