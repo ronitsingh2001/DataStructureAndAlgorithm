@@ -90,9 +90,9 @@ public class AddFirstToLinkedList {
             // write your code here
             Node temp = new Node();
             temp.data = val;
-            temp.next=head;
-            if(size ==0){
-                tail =null;
+            temp.next = head;
+            if (size == 0) {
+                tail = null;
             }
             size++;
         }

@@ -29,21 +29,21 @@ public class RemoveFirstFromLinkedList {
       size++;
     }
 
-    public int size(){
+    public int size() {
       return size;
     }
 
-    public void display(){
-      for(Node temp = head; temp != null; temp = temp.next){
+    public void display() {
+      for (Node temp = head; temp != null; temp = temp.next) {
         System.out.print(temp.data + " ");
       }
       System.out.println();
     }
 
-    public void removeFirst(){
-      if(size == 0){
+    public void removeFirst() {
+      if (size == 0) {
         System.out.println("List is empty");
-      } else if(size == 1){
+      } else if (size == 1) {
         head = tail = null;
         size = 0;
       } else {
@@ -58,15 +58,15 @@ public class RemoveFirstFromLinkedList {
     LinkedList list = new LinkedList();
 
     String str = br.readLine();
-    while(str.equals("quit") == false){
-      if(str.startsWith("addLast")){
+    while (str.equals("quit") == false) {
+      if (str.startsWith("addLast")) {
         int val = Integer.parseInt(str.split(" ")[1]);
         list.addLast(val);
-      } else if(str.startsWith("size")){
+      } else if (str.startsWith("size")) {
         System.out.println(list.size());
-      } else if(str.startsWith("display")){
+      } else if (str.startsWith("display")) {
         list.display();
-      } else if(str.startsWith("remove")){
+      } else if (str.startsWith("remove")) {
         list.removeFirst();
       }
       str = br.readLine();

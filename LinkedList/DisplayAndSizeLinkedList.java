@@ -2,7 +2,6 @@ package LinkedList;
 
 import java.io.*;
 
-
 public class DisplayAndSizeLinkedList {
     public static class Node {
         int data;
@@ -37,8 +36,8 @@ public class DisplayAndSizeLinkedList {
         public void display() {
             // write code here
             Node temp = head;
-            while(temp != null){
-                System.out.print(temp.data+" ");
+            while (temp != null) {
+                System.out.print(temp.data + " ");
                 temp = temp.next;
             }
             System.out.println();

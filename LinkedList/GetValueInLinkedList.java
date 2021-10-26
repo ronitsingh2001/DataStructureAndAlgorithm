@@ -80,9 +80,9 @@ public class GetValueInLinkedList {
             } else if (idx < 0 || idx >= size) {
                 System.out.println("Invalid arguments");
                 return -1;
-            }else{
+            } else {
                 Node temp = head;
-                for(int i=0;i<idx;i++){
+                for (int i = 0; i < idx; i++) {
                     temp = temp.next;
                 }
                 return temp.data;
