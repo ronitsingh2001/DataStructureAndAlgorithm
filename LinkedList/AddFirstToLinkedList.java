@@ -91,8 +91,9 @@ public class AddFirstToLinkedList {
             Node temp = new Node();
             temp.data = val;
             temp.next = head;
+            head=temp;
             if (size == 0) {
-                tail = null;
+                tail = temp;
             }
             size++;
         }
