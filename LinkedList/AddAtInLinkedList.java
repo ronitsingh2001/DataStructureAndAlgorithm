@@ -101,8 +101,6 @@ public class AddAtInLinkedList {
 
         public void addAt(int idx, int val) {
             // write your code here
-            
-
             if (idx < 0 || idx > size) {
                 System.out.println("Invalid arguments");
             } else if (idx == 0) {
