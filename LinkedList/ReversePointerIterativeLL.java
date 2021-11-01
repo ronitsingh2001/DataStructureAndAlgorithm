@@ -1,7 +1,7 @@
 package LinkedList;
 import java.io.*;
 
-public class ReverseDiLL {
+public class ReversePointerIterativeLL {
     
       public static class Node {
         int data;
@@ -155,26 +155,45 @@ public class ReverseDiLL {
             size--;
           }
         }
-        private Node nodeAt(int idx){
+    
+        private Node getNodeAt(int idx) {
           Node temp = head;
-          for(int i=0;i<idx;i++){
-            temp=temp.next;
+          for (int i = 0; i < idx; i++) {
+            temp = temp.next;
           }
           return temp;
         }
-
+    
         public void reverseDI() {
-          // write your code here
-          int fi=0,li=size-1;
-          while(li>fi){
-          Node first = nodeAt(fi);
-          Node last = nodeAt(li);
-          int temp = first.data;
-          first.data=last.data;
-          last.data=temp;
-          li--;fi++;
+          int li = 0;
+          int ri = size - 1;
+          while(li < ri){
+            Node left = getNodeAt(li);
+            Node right = getNodeAt(ri);
+    
+            int temp = left.data;
+            left.data = right.data;
+            right.data = temp;
+    
+            li++;
+            ri--;
           }
-          
+        }
+     
+        public void reversePI(){
+          // write your code here
+          Node prev = null, cur = head;
+           while(cur!=null){
+               Node next= cur.next;
+                cur.next=prev;
+
+                prev=cur;
+                cur=next;
+           }
+           Node temp = head;
+           head=tail;
+           tail=temp;
+
         }
       }
     
@@ -223,6 +242,8 @@ public class ReverseDiLL {
             list.removeAt(idx);
           } else if(str.startsWith("reverseDI")){
             list.reverseDI();
+          } else if(str.startsWith("reversePI")){
+            list.reversePI();
           }
           str = br.readLine();
         }
