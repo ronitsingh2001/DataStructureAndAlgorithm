@@ -367,6 +367,13 @@ public class DisplayReverseLLRecurcive {
     
         private void displayReverseHelper(Node node){
           // write your code here
+          if(node.next==null){
+              return;
+            }
+
+            displayReverseHelper(node.next);
+            System.out.print(node.data+" ");
+
         }
     
         public void displayReverse(){
