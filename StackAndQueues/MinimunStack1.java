@@ -30,7 +30,7 @@ public class MinimunStack1 {
         int pop() {
             // write your code here
             if (allData.size() == 0) {
-                System.out.println("Stack overflow");
+                System.out.println("Stack underflow");
                 return -1;
             } else {
                 if (allData.peek() == minData.peek()) {
