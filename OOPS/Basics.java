@@ -6,9 +6,9 @@ public class Basics {
         p1.age = 10;
         p1.name = "A";
         p1.saysHi();
-        Person p2 = new Person(80,"B");
+        Person p2 = new Person(80, "B");
         p2.saysHi();
-       
+
     }
 
     public static void swap(Person p1, Person p2) {
@@ -30,7 +30,7 @@ public class Basics {
         int age = p1.age;
         p1.age = p2.age;
         p2.age = age;
-        
+
         p2 = new Person();
 
         String name = p1.name;
@@ -41,11 +41,15 @@ public class Basics {
     public static class Person {
         int age;
         String name;
-        Person(int age, String name){
-            this.age=age;
-            this.name=name;
+
+        Person(int age, String name) {
+            this.age = age;
+            this.name = name;
         }
-        Person(){}
+
+        Person() {
+        }
+
         void saysHi() {
             System.out.println(name + "[" + age + "] Says Hi!");
         }
