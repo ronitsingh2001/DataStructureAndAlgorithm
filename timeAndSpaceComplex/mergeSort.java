@@ -3,6 +3,7 @@ package timeAndSpaceComplex;
 import java.util.*;
 
 public class MergeSort {
+
   public static int[] mergeSort(int[] arr, int lo, int hi) {
     // write your code here
     if (lo == hi) {
