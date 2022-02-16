@@ -8,8 +8,6 @@ public class RotateANum {
         int n = sc.nextInt();
         int rot=sc.nextInt();
         sc.close();
-        int temp = (int)(n % Math.pow(10, rot));
-        System.out.print(temp);
-        System.out.print((int)(n / Math.pow(10, rot)));
+       
     }
 }
