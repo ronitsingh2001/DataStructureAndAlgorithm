@@ -10,8 +10,8 @@ public class PythagorasTriplet {
     int b = sc.nextInt();
     int c = sc.nextInt();
     sc.close();
-    if (a*a + b*b == c * c || b*b + c*c == a * a || a*a + c*c == b * b) System.out.println(
-      true
-    ); else System.out.println(false);
+    if (
+      a * a + b * b == c * c || b * b + c * c == a * a || a * a + c * c == b * b
+    ) System.out.println(true); else System.out.println(false);
   }
 }
